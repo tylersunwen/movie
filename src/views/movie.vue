@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name:movie,
+  name:"movie",
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

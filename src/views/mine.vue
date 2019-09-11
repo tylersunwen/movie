@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name:mine,
+  name:"mine",
   methods:{
       fun(){
           console.log("a");
@@ -15,6 +15,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
