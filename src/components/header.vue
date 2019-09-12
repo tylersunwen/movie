@@ -85,7 +85,7 @@ import mine from "@/views/mine";
 import america from "@/components/america";
 import china from "@/components/china";
 export default {
-  name: "HelloWorld",
+  name: "header",
   data() {
     return {
       obj:{
