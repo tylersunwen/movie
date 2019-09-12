@@ -20,7 +20,7 @@
             </template>
             <el-menu-item-group>
               <template slot="title">华南</template>
-              <el-menu-item index="../hello/america">广州</el-menu-item>
+              <el-menu-item index="../hello/cinema">广州</el-menu-item>
               <el-menu-item index="1-2">深圳</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="华中">
@@ -29,49 +29,28 @@
           </el-submenu>
           <el-submenu index="2">
             <template slot="title">
-              <i class="el-icon-menu"></i>导航二
+              <i class="el-icon-menu"></i>电影
             </template>
-            <el-menu-item-group>
-              <template slot="title">分组一</template>
-              <el-menu-item index="2-1">选项1</el-menu-item>
+              <el-menu-item index="../hello/movie">选项1</el-menu-item>
               <el-menu-item index="2-2">选项2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="分组2">
-              <el-menu-item index="2-3">选项3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="2-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="2-4-1">选项4-1</el-menu-item>
-            </el-submenu>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
-              <i class="el-icon-setting"></i>导航三
+              <i class="el-icon-setting"></i>我的
             </template>
-            <el-menu-item-group>
-              <template slot="title">分组一</template>
-              <el-menu-item index="3-1">选项1</el-menu-item>
-              <el-menu-item index="3-2">选项2</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group title="分组2">
-              <el-menu-item index="3-3">选项3</el-menu-item>
-            </el-menu-item-group>
-            <el-submenu index="3-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="3-4-1">选项4-1</el-menu-item>
-            </el-submenu>
           </el-submenu>
         </el-menu>
       </el-aside>
 
       <el-main>
-        <movie></movie>
-        <div>
+        <!-- <movie></movie> -->
+        <!-- <div>
           <h1>{{obj}}</h1>
           <h1>{{da}}</h1>
-        </div>
-        <router-link to="/hello/america">america</router-link>
-        <router-link to="/hello/china">china</router-link>
+        </div> -->
+        <!-- <router-link to="/hello/movie">movie</router-link>
+        <router-link to="/hello/cinema">cinema</router-link>
+        <router-link to="/hello/mine">mine</router-link> -->
         <router-view></router-view>
       </el-main>
       <el-footer>footer</el-footer>

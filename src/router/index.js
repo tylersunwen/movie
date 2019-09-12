@@ -21,12 +21,16 @@ export default new Router({
       component:HelloWorld,
       children:[
         {
-          path:'/hello/america',
-          component:america,
+          path:'/hello/movie',
+          component:movie,
         },
         {
-          path:'/hello/china',
-          component:china,
+          path:'/hello/cinema',
+          component:cinema,
+        },
+        {
+          path:'/hello/mine',
+          component:mine,
         },
       ]
     },
