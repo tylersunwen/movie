@@ -7,6 +7,7 @@ import mine from '@/views/mine'
 import america from '@/components/america'
 import china from '@/components/china'
 import world from '@/components/world'
+import infor from '@/components/infor'
 Vue.use(Router)
 
 export default new Router({
@@ -35,6 +36,11 @@ export default new Router({
       ]
     },
     {
+      path: '/w/:world',
+      name: 'world',
+      component: world
+    },
+    {
       path: '/movie',
       name: 'movie',
       component: movie
@@ -47,7 +53,13 @@ export default new Router({
     {
       path: '/mine',
       name: 'mine',
-      component: mine
+      component: mine,
+      children:[
+        {
+          path:'/mine/infor',
+          component:infor,
+        }
+      ]
     },
   ]
 })

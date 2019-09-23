@@ -12,7 +12,7 @@
         </el-breadcrumb>
       </el-header>
 
-      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+      <el-aside width="200px" style="background-color: rgb(238, 241, 246)" id="aside">
         <el-menu :default-active="$route.path" router unique-opened>
           <el-submenu index="1">
             <template slot="title">
@@ -20,7 +20,7 @@
             </template>
             <el-menu-item-group>
               <template slot="title">华南</template>
-              <el-menu-item index="../hello/cinema">广州</el-menu-item>
+              <el-menu-item index="/hello/cinema">广州</el-menu-item>
               <el-menu-item index="1-2">深圳</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="华中">
@@ -31,13 +31,14 @@
             <template slot="title">
               <i class="el-icon-menu"></i>电影
             </template>
-              <el-menu-item index="../hello/movie">选项1</el-menu-item>
+              <el-menu-item index="/hello/movie">选项1</el-menu-item>
               <el-menu-item index="2-2">选项2</el-menu-item>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-setting"></i>我的
             </template>
+            <el-menu-item index="/mine/infor">信息</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
@@ -48,9 +49,9 @@
           <h1>{{obj}}</h1>
           <h1>{{da}}</h1>
         </div> -->
-        <!-- <router-link to="/hello/movie">movie</router-link>
-        <router-link to="/hello/cinema">cinema</router-link>
-        <router-link to="/hello/mine">mine</router-link> -->
+        <!-- <router-link to="/hello/movie">movie</router-link> -->
+        <router-link :to="{name:'world',params:{world:123}}">cinema</router-link>
+        <!-- <router-link to="/hello/mine">mine</router-link> -->
         <router-view></router-view>
       </el-main>
       <el-footer>footer</el-footer>
@@ -89,5 +90,8 @@ export default {
   background: blue;
   font-size: 20px;
   border-radius: 5px;
+}
+.aside{
+  float:left;
 }
 </style>
