@@ -1,15 +1,14 @@
 <template>
     <div>
-        hello mine
-        <router-view></router-view>
+        <!-- hello mine
         <input v-model=temp @click="fun" ref="input1">
         <div>
           {{count}}
           {{a}}
         </div>
         <input type="button" value="+" @click="incre">
-        <input type="button" value="-" @click="decre">
-        <!-- {{}} -->
+        <input type="button" value="-" @click="decre"> -->
+        <router-view></router-view>
     </div>
 </template>
 
@@ -50,11 +49,11 @@ export default {
     })
   },
   mounted(){
-    this.ttt();
+    // this.ttt();
     
   },
   created(){
-    this.ttt();
+    // this.ttt();
   }
 }
 </script>

@@ -8,6 +8,7 @@ import america from '@/components/america'
 import china from '@/components/china'
 import world from '@/components/world'
 import infor from '@/components/infor'
+import message from '@/components/message'
 Vue.use(Router)
 
 export default new Router({
@@ -58,7 +59,11 @@ export default new Router({
         {
           path:'/mine/infor',
           component:infor,
-        }
+        },
+        {
+          path:'/mine/message',
+          component:message,
+        },
       ]
     },
   ]

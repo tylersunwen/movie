@@ -39,6 +39,7 @@
               <i class="el-icon-setting"></i>我的
             </template>
             <el-menu-item index="/mine/infor">信息</el-menu-item>
+            <el-menu-item index="/mine/message">通信</el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
