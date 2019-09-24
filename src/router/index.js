@@ -9,6 +9,7 @@ import china from '@/components/china'
 import world from '@/components/world'
 import infor from '@/components/infor'
 import message from '@/components/message'
+import login from '@/views/login'
 Vue.use(Router)
 
 export default new Router({
@@ -16,6 +17,11 @@ export default new Router({
     {
       path:'/',
       redirect:'/hello'
+    },
+    {
+      path:'/login',
+      name: 'login',
+      component:login,
     },
     {
       path: '/hello',

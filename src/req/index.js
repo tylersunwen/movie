@@ -1,4 +1,5 @@
 import axios from 'axios'
+import qs from 'qs'
 axios.defaults.timeout = 10000;
 
 export function get(url, params) {
@@ -15,5 +16,19 @@ export function get(url, params) {
         }).catch(err => {
             reject(err.data)
         })
+    });
+}
+
+export function post(url, params) {
+    // console.log(params);
+    return new Promise((resolve, reject) => {
+        axios.post(url, qs.stringify(params))
+            .then(res => {
+                resolve(res.data);
+                localStorage.setItem('session', res.headers["access-session"]);
+                // console.log(localStorage.getItem('session'));
+            }).catch(err => {
+                reject(err.data)
+            })
     });
 }
