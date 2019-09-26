@@ -32,8 +32,8 @@
             <template slot="title">
               <i class="el-icon-menu"></i>电影
             </template>
-              <el-menu-item index="/hello/movie">选项1</el-menu-item>
-              <el-menu-item index="2-2">选项2</el-menu-item>
+              <el-menu-item index="/hello/movie">美国</el-menu-item>
+              <el-menu-item index="2-2">中国</el-menu-item>
           </el-submenu>
           <el-submenu index="3">
             <template slot="title">
@@ -66,7 +66,11 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      location:["推荐"],
+      location:{
+        '/hello':['推荐'],
+        '/hello/movie':['推荐','电影'],
+        '/hello/cinema':['推荐','影院'],
+      },
     };
   },
   components: {
@@ -80,11 +84,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#head {
-  background: black;
-  font-size: 20px;
-  border-radius: 5px;
-}
 .aside{
   float:left;
 }
