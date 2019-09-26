@@ -22,7 +22,7 @@ export default {
   components: {
   },
   mounted(){
-    // console.log((this.$route.matched));
+    // console.log((this.$route.matched));  
   },
   props: ['location'],
   methods:{
