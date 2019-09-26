@@ -3,14 +3,9 @@
       <el-header id="head">
         <el-breadcrumb separator="/">
           <el-breadcrumb-item :to="{ path: '/hello' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>
-            <a href="/#/hello">简介</a>
-          </el-breadcrumb-item>
-          <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-          <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+          <el-breadcrumb-item v-for="(item) in location" :key="item">{{item}}</el-breadcrumb-item>
         </el-breadcrumb>
       </el-header>
-      {{message}}{{a}}
   </div>
 </template>
 
@@ -24,7 +19,11 @@ export default {
   },
   components: {
   },
-  props: ['message','a'],
+  mounted(){
+    // console.log(this.$route);
+  },
+  props: ['location'],
+  
 };
 </script>
 

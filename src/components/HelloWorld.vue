@@ -10,7 +10,7 @@
           <el-breadcrumb-item>活动列表</el-breadcrumb-item>
           <el-breadcrumb-item>活动详情</el-breadcrumb-item>
         </el-breadcrumb> -->
-        <myheader message="hello" a="world"></myheader>
+        <myheader :location=location></myheader>
       
 
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)" id="aside">
@@ -46,11 +46,6 @@
       </el-aside>
 
       <el-main>
-        <!-- <movie></movie> -->
-        <!-- <div>
-          <h1>{{obj}}</h1>
-          <h1>{{da}}</h1>
-        </div> -->
         <!-- <router-link to="/hello/movie">movie</router-link> -->
         <router-link :to="{name:'world',params:{world:123}}">cinema</router-link>
         <!-- <router-link to="/hello/mine">mine</router-link> -->
@@ -71,11 +66,7 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      obj:{
-        type:String,
-        default:"temp"
-      },
-      da:"fff"
+      location:["推荐"],
     };
   },
   components: {
