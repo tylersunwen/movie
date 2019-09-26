@@ -4,12 +4,13 @@ import HelloWorld from '@/components/HelloWorld'
 import movie from '@/views/movie'
 import cinema from '@/views/cinema'
 import mine from '@/views/mine'
-import america from '@/components/america'
-import china from '@/components/china'
+// import america from '@/components/america'
+// import china from '@/components/china'
 import world from '@/components/world'
 import infor from '@/components/infor'
 import message from '@/components/message'
 import login from '@/views/login'
+// import header from '@/components/header'
 Vue.use(Router)
 
 export default new Router({

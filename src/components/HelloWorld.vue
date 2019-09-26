@@ -1,16 +1,17 @@
 <template>
   <div>
     <el-container>
-      <el-header id="head">
-        <el-breadcrumb separator="/">
+      
+        <!-- <el-breadcrumb separator="/">
           <el-breadcrumb-item :to="{ path: '/hello' }">首页</el-breadcrumb-item>
           <el-breadcrumb-item>
             <a href="/#/hello">简介</a>
           </el-breadcrumb-item>
           <el-breadcrumb-item>活动列表</el-breadcrumb-item>
           <el-breadcrumb-item>活动详情</el-breadcrumb-item>
-        </el-breadcrumb>
-      </el-header>
+        </el-breadcrumb> -->
+        <myheader message="hello" a="world"></myheader>
+      
 
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)" id="aside">
         <el-menu :default-active="$route.path" router unique-opened>
@@ -65,6 +66,7 @@ import movie from "@/views/movie";
 import mine from "@/views/mine";
 import america from "@/components/america";
 import china from "@/components/china";
+import myheader from "@/components/myheader";
 export default {
   name: "HelloWorld",
   data() {
@@ -77,7 +79,7 @@ export default {
     };
   },
   components: {
-    movie
+    myheader,
     //  america,
     // default:china,
     // second:america
@@ -88,7 +90,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #head {
-  background: blue;
+  background: black;
   font-size: 20px;
   border-radius: 5px;
 }
