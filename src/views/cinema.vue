@@ -5,6 +5,8 @@
         <div v-for="(item) in xss" :key="item">
             {{item}}
         </div>
+        <!-- <input type="file" name="file" accept=".jpg, .jpeg, .png" @change="uploadAvatar"> -->
+        <!-- <img src="http://localhost:9000/img"> -->
     </div>
 </template>
 

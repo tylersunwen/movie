@@ -1,21 +1,7 @@
 <template>
   <div>
-    <div id="container">
-      <div id="main">
-
-      </div>
-    </div>
     <el-container>
-      
-        <!-- <el-breadcrumb separator="/">
-          <el-breadcrumb-item :to="{ path: '/hello' }">首页</el-breadcrumb-item>
-          <el-breadcrumb-item>
-            <a href="/#/hello">简介</a>
-          </el-breadcrumb-item>
-          <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-          <el-breadcrumb-item>活动详情</el-breadcrumb-item>
-        </el-breadcrumb> -->
-        <myheader :location=location></myheader>
+      <myheader :location=location></myheader>
       
       <el-container>
 
@@ -50,7 +36,7 @@
             </el-submenu>
           </el-menu>
         </el-aside>
-        
+
         <el-container>
           <el-main>
             <!-- <router-link to="/hello/movie">movie</router-link> -->
@@ -61,7 +47,9 @@
         </el-container>
       </el-container>
       
-      <el-footer>footer</el-footer>
+      <el-footer>
+        <label style="color: #969696;">© 2019 流浪者 sunwen586@163.com</label>
+      </el-footer>
     </el-container>
   </div>
 </template>

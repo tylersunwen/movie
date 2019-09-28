@@ -50,6 +50,7 @@ export default {
   },
   mounted(){
     // this.ttt();
+    console.log(this.$el);
     
   },
   created(){
