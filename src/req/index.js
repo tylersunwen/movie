@@ -36,12 +36,8 @@ export function post(url, params) {
 export function getimg(url, params) {
     // console.log(url);
     return new Promise((resolve, reject) => {
-        axios.get(url, {
-            params: params,
-            headers: {
-                "Access-Session": localStorage.getItem('session'),
-                "Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
-            }
+        axios.get(url, { 
+            responseType: 'blob'
         }).then(res => {
             resolve(res.data);
         }).catch(err => {
