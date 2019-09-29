@@ -9,7 +9,7 @@
 				<el-form-item label='密码' prop='password'>
 					<el-input v-model='userLogin.password' type='password' placeholder='请输入密码' autocomplete="off" id='password' clearable></el-input>
 				</el-form-item>
-
+				<!-- <img> -->
 				<el-form-item class="button">
 					<el-button type='primary' @click='login()'
 					>登录</el-button>
