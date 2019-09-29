@@ -9,7 +9,8 @@
 				<el-form-item label='密码' prop='password'>
 					<el-input v-model='userLogin.password' type='password' placeholder='请输入密码' autocomplete="off" id='password' clearable></el-input>
 				</el-form-item>
-				<!-- <img> -->
+				<!-- <img :src=code> -->
+				<span v-html="code"></span>
 				<el-form-item class="button">
 					<el-button type='primary' @click='login()'
 					>登录</el-button>
@@ -26,7 +27,7 @@
 </template>
 
 <script >
-import { post } from "../req/index.js";
+import { post,get } from "../req/index.js";
 
 // let Base64 = require('js-base64').Base64
 
@@ -48,7 +49,8 @@ import { post } from "../req/index.js";
 					{required:true,message:'密码不能为空',	trigger: 'blur'},
 					{min:5,message:'密码长度必须大于5个字符字符',}
 					]
-				}
+				},
+				code:null,
 			};
 		},
 		methods:{
@@ -104,6 +106,18 @@ import { post } from "../req/index.js";
                     }
                 });
 			},
+			getCode(){
+				let res=get("/api/code",{});
+				res.then(data=>{
+					this.code=data.img;
+					// console.log(this.code);
+				})
+				
+			}
+		},
+		mounted(){
+			this.getCode();
+			// console.log(this.code);
 		}
 	}
 </script>
